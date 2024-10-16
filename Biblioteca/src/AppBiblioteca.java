@@ -13,22 +13,23 @@ public class AppBiblioteca {
         Scanner sc = new Scanner(System.in);
         libro = new Libro();
         System.out.println("Digite el codigo del libro:");
-        libro.setCodigo(sc.nextInt());
+        libro.setCodigo(Integer.parseInt(sc.nextLine()));
+        //sc.nextLine();
         System.out.println("Digite el nombre del libro:");
-        sc.useDelimiter("\n");
-        libro.setNombre(sc.next());
+        libro.setNombre(sc.nextLine());
         System.out.println("Digite el año de publicacion:");
-        libro.setAñoPublicacion(sc.nextInt());
+        libro.setAñoPublicacion(Integer.parseInt(sc.nextLine()));
         System.out.println("Digite la edicion:");
-        libro.setEdicion(sc.nextInt());
-
+        libro.setEdicion(Integer.parseInt(sc.nextLine()));
         Autor autor = new Autor();
         System.out.println("Digite el codigo del autor del libro:");
-        autor.setCodigo(sc.nextInt());
+        autor.setCodigo(Integer.parseInt(sc.nextLine()));
+        //sc.nextLine();
         System.out.println("Digite el nombre del autor del libro:");
-        autor.setNombre(sc.next());
+        autor.setNombre(sc.nextLine());
 
         libro.setAutor(autor);
+        
     }
 
     public void imprimir() {
